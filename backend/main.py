@@ -19,7 +19,7 @@ class PrediksiInput(BaseModel):
      Tahun: int
      Bulan: int
      Hari: int
-     Hari_dalam_tahun: int
+     Hari_dalam_minggu: int
      Lag_1: float
      Lag_7: float
      Rolling_Mean_7: float
