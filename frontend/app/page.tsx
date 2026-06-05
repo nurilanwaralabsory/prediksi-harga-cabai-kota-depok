@@ -16,7 +16,7 @@ export default function Home() {
           };
 
           const respon = await fetch(
-               "https://abzhorrr-api-prediksi-cabai-kota-depok.hf.space/predic",
+               "https://abzhorrr-api-prediksi-cabai-kota-depok.hf.space/predict",
                {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
