@@ -15,11 +15,14 @@ export default function Home() {
                Rolling_Mean_7: 77000,
           };
 
-          const respon = await fetch("URL_RENDER_ANDA/predict", {
-               method: "POST",
-               headers: { "Content-Type": "application/json" },
-               body: JSON.stringify(dataInput),
-          });
+          const respon = await fetch(
+               "https://abzhorrr-api-prediksi-cabai-kota-depok.hf.space/predict",
+               {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(dataInput),
+               },
+          );
 
           const hasil = await respon.json();
           setHarga(hasil.prediksi_harga);
