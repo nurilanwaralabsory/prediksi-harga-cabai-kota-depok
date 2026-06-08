@@ -42,7 +42,7 @@ export default function Home() {
 
                {harga && (
                     <div className="mt-4 p-4 bg-green-100 rounded">
-                         <p>
+                         <p className="text-lg font-semibold text-black">
                               Prediksi Harga: Rp{" "}
                               {Math.round(harga).toLocaleString("id-ID")}
                          </p>
