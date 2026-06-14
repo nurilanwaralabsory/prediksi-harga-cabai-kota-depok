@@ -1,6 +1,16 @@
 import { ArrowUp, ArrowDown, Minus } from "lucide-react";
 
-const stats = [
+type StatItem = {
+     label: string;
+     value: string;
+     sub: string;
+     change: string;
+     changeDir: "up" | "down" | "flat"; // Daftarkan semua kemungkinan nilai di sini
+     iconBg: string;
+     iconColor: string;
+};
+
+const stats: StatItem[] = [
      {
           label: "Hari Ini",
           value: "Rp 80.000",
@@ -47,7 +57,7 @@ function StatCard({
                  : Minus;
 
      return (
-          <div className="shrink-0 rounded-2xl p-4 bg-white shadow-[0_2px_16px_rgba(0,0,0,0.05)] w-[148px] md:w-full transition-all duration-300">
+          <div className="shrink-0 rounded-2xl p-4 bg-white shadow-[0_2px_16px_rgba(0,0,0,0.05)] w-37 md:w-full transition-all duration-300">
                {/* Icon bubble */}
                <div
                     className="rounded-xl flex items-center justify-center mb-3 w-9 h-9"
