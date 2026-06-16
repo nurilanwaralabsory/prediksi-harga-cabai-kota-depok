@@ -91,6 +91,32 @@ def predict_manual(data: PrediksiManual):
     hasil = model.predict(input_data)
     return {"prediksi_harga": hasil[0]}
 
+# -------------------------------------------------------------------
+# ENDPOINT 3: MENGAMBIL DATA HISTORIS UNTUK GRAFIK
+# -------------------------------------------------------------------
+BULAN_ID = {
+    1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "Mei", 6: "Jun",
+    7: "Jul", 8: "Agu", 9: "Sep", 10: "Okt", 11: "Nov", 12: "Des"
+}
+
+@app.get("/historical_data")
+def get_historical_data():
+    # Ambil 20 data terakhir dari DataFrame (CSV)
+    df_last_20 = df_historis.tail(20)
+    
+    hasil = []
+    for _, row in df_last_20.iterrows():
+        tgl = row['Tanggal']
+        # Format tanggal menjadi "12 Des" agar sesuai dengan frontend
+        date_str = f"{tgl.day} {BULAN_ID[tgl.month]}"
+        hasil.append({
+            "date": date_str,
+            "price": float(row['Harga']),
+            "isPredicted": False
+        })
+        
+    return {"data": hasil}
+
 @app.get("/")
 def read_root():
-    return {"message": "API Prediksi Harga Cabai (Mode Statis) Aktif!"}
+    return {"message": "API Prediksi Harga Cabai Aktif!"}
