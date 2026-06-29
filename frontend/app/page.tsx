@@ -287,7 +287,7 @@ export default function App() {
                                    }}
                                    className="hover:text-foreground transition-colors"
                               >
-                                   Simulator
+                                   Prediksi
                               </a>
                               <a
                                    href="#tren"
@@ -345,7 +345,7 @@ export default function App() {
                               className="text-[3.4rem] md:text-[5rem] font-extrabold tracking-[-0.03em] leading-[1.04] mb-7"
                               style={{ letterSpacing: "-0.03em" }}
                          >
-                              Simulator Cerdas
+                              Prediksi Cerdas
                               <br />
                               <span style={{ color: "#15803d" }}>
                                    Harga Cabai{" "}
@@ -452,7 +452,7 @@ export default function App() {
                                    Alat Simulasi
                               </p>
                               <h2 className="text-[2rem] font-extrabold tracking-tight">
-                                   Simulator Harga Manual
+                                   Prediksi Harga Manual
                               </h2>
                               <p className="text-muted-foreground mt-2 text-sm">
                                    Eksperimen dengan memodifikasi parameter
@@ -725,7 +725,7 @@ export default function App() {
                                    historicalData.length > 0 && (
                                         <div className="flex items-center gap-2.5 mb-6 px-4 py-3 rounded-xl bg-green-50 border border-green-100 text-[13px] font-semibold text-green-700">
                                              <Sparkles className="w-3.5 h-3.5 flex-shrink-0" />
-                                             Gunakan simulator di atas untuk
+                                             Gunakan prediksi di atas untuk
                                              memunculkan proyeksi titik harga
                                              pada grafik.
                                         </div>
@@ -836,7 +836,7 @@ export default function App() {
                                    Metodologi
                               </p>
                               <h2 className="text-[2rem] font-extrabold tracking-tight">
-                                   Cara Kerja Simulator
+                                   Cara Kerja Prediksi
                               </h2>
                          </div>
                          <div className="grid md:grid-cols-3 gap-6">
@@ -907,7 +907,7 @@ export default function App() {
                                         CabaIA
                                    </p>
                                    <p className="text-[11px] text-muted-foreground font-semibold">
-                                        Simulator Harga Cabai Berbasis AI · Kota
+                                        Prediksi Harga Cabai Berbasis AI · Kota
                                         Depok
                                    </p>
                               </div>
